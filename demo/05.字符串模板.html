@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  //   let name =  'stark';
+  //   let html = 
+  //   '<ul> ' +
+  //     '<li>'+
+  //       '<span> my name is '+ name +'<span>'+
+  //      '</li>' +
+  //   '</ul>';
+
+  //   let htmls = 
+  //   '<ul> \
+  //     <li>\
+  //       <span> my name is '+ name +'<span>\
+  //      </li>\
+  //   </ul>';
+
+
+  //   let htmles6 = 
+  //   `
+  //   <ul> 
+  //     <li>
+  //       <span> my name is ${name}<span>
+  //      </li>
+  //   </ul>
+    
+  //   `;
+
+  //   let htmles6trim = 
+  //   `
+  //   <ul> 
+  //     <li>
+  //       <span> my name is ${name}<span>
+  //      </li>
+  //   </ul>
+    
+  //   `.trim();
+
+  // let greeting = `\`Yo\` World!`;
+
+  // console.log(greeting);
+  //   console.log(html);
+  //   console.log(htmls);
+  //   console.log(htmles6);
+  //   console.log(htmles6trim);
+
+
+    // const tmpl = addrs => `
+    //   <table>
+    //   ${addrs.map(addr => `
+    //     <tr><td>${addr.first}</td></tr>
+    //     <tr><td>${addr.last}</td></tr>
+    //   `).join('')}
+    //   </table>
+    // `;
+
+
+  // const data = [
+  //   { first: '<Jane>', last: 'Bond' },
+  //   { first: 'Lars', last: '<Croft>' },
+  //   { first: 'stark', last: '<shudong>' },
+  // ];
+
+  // console.log(tmpl(data));
+
+
+  // 写法一
+    // let str = 'return ' + '`Hello ${name}!`';
+    // let func = new Function('name', str);
+    // func('Jack') // "Hello Jack!"
+
+
+    // // 写法二
+    //   let str = '(name) => `Hello ${name}!`';
+    //   let func = eval.call(null, str);
+    //   func('Jack') // "Hello Jack!"
+
+      // alert`123`
+      // alert(123)
+
+
+      let name = 'stark'.repeat(9);
+      console.log(name);
+
+
+      // padStart() ，padEnd()
+
+     let xx =  'x'.padStart(5, 'ab') // 'ababx'
+     console.log(xx);
+        'x'.padStart(4, 'ab') // 'abax'
+
+        'x'.padEnd(5, 'ab') // 'xabab'
+        'x'.padEnd(4, 'ab') // 'xaba'
+
+
+        for (let codePoint of 'foo') {
+            console.log(codePoint)
+          }
+  </script>
+</body>
+</html>

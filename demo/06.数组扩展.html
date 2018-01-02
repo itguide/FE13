@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p>hahahsadsssssssssssssssssssssssssssssssssssss hahahsadsssssssssssssssssssssssssssssssssssss hahahsadsssssssssssssssssssssssssssssssssssss</p>
+  <p></p>
+  <p></p>
+  <p>hahahsadsssssssssssssssssssssssssssssssssssss hahahsadsssssssssssssssssssssssssssssssssssss hahahsadsssssssssssssssssssssssssssssssssssss</p>
+  <p>sss</p>
+  <p></p>
+  <div>
+
+    hahahsadsssssssssssssssssssssssssssssssssssss
+    hahahsadsssssssssssssssssssssssssssssssssssss
+    hahahsadsssssssssssssssssssssssssssssssssssss
+  </div>
+// NodeList对象 let ps = document.querySelectorAll('p'); Array.from(ps).filter(p => { return p.textContent.length > 100; });
+
+  <div>
+
+  </div>
+  <div>sas</div>
+  <div>sa</div>
+  <div>sas</div>
+  <script>
+      // console.log([...document.querySelectorAll('div')]);
+
+      // function add(x, y) {
+      //     return x + y;
+      // }
+
+      // const numbers = [4, 38];
+      // add(...numbers) // 42
+
+
+        const a1 = [1, 2];
+        const a2 = a1;
+
+        a2[0] = 2;
+        a1 // [2, 2]
+
+
+  // ES5
+  // [1, 2].concat(more)
+  // ES6
+  // [1, 2, ...more]
+
+  var arr1 = ['a', 'b'];
+  var arr2 = ['c'];
+  var arr3 = ['d', 'e'];
+
+  // ES5的合并数组
+  arr1.concat(arr2, arr3);
+  // [ 'a', 'b', 'c', 'd', 'e' ]
+
+  // ES6的合并数组
+  [...arr1, ...arr2, ...arr3]
+// [ 'a', 'b', 'c', 'd', 'e' ]
+        // 上面代码中，a2并不是a1的克隆，而是指向同一份数据的另一个指针。修改a2，会直接导致a1的变化。
+
+
+  // NodeList对象
+    // let ps = document.querySelectorAll('p');
+    // let pssss = Array.from(ps).filter(p => {
+    //   // console.log(p.textContent);
+    //   return p.textContent.length > 100;
+    // });
+
+    // console.log(pssss);
+
+    // let res = [1, 4, -5, 10].find((n) => n < 0)
+    // console.log(res);
+    // 直到找出第一个返回值为true的成员
+
+    // let res = [1, 5, 20, 10, 15].findIndex(function (value, index, arr) {
+    //     return value > 11;
+    //   }) 
+      // 数组实例的findIndex方法的用法与find方法非常类似，
+      // 返回第一个符合条件的数组成员的位置，
+      // 如果所有成员都不符合条件，则返回 - 1。
+      // console.log(res);
+
+      // for (let index of ['a', 'b'].keys()) {
+      //     console.log(index);
+      //   }
+        // 0
+        // 1
+
+        // for (let elem of ['a', 'b'].values()) {
+        //   console.log(elem);
+        // }
+        // // 'a'
+        // // 'b'
+
+        // for (let [index, elem] of ['a', 'b'].entries()) {
+        //   console.log(index, elem);
+        // }
+// 0 "a"
+// 1 "b"
+  let letter = ['a', 'b', 'c'];
+  let entries = letter.entries();
+  console.log(entries.next().value); // [0, 'a']
+  console.log(entries.next().value); // [1, 'b']
+  console.log(entries.next().value); // [2, 'c']
+  </script>
+</body>
+</html>
