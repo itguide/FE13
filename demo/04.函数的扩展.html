@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 函数的参数默认值
+    function stark(x,y="shudong"){
+      console.log(x,y);
+    }
+
+    // stark('stark');
+  // rest 参数
+  // ES6 引入 rest 参数（形式为...变量名），用于获取函数的多余参数，
+  // 这样就不需要使用arguments对象了。
+  // rest 参数搭配的变量是一个数组，该变量将多余的参数放入数组中。
+    function shudong(a,b,...arr){
+      console.log(a);
+      console.log(b);
+      console.log(arr);
+    }
+
+    // shudong(10,11,12,13,14,15,16,17);
+
+    // function add(...values) {
+    //     let sum = 0;
+
+    //     for (var val of values) {
+    //       sum += val;
+    //     }
+
+    //     return sum;
+    //   }
+
+    //   add(2, 5, 3) // 10
+
+
+    function push(array, ...items) {
+        items.forEach(function (item) {
+          array.push(item);
+          console.log(item);
+        });
+      }
+
+      var a = [];
+      var b = [];
+      push(a, 1, 2, 3)
+      push(b, 'shudong','stark', 'wang')
+      console.log(b);
+
+// console.log((function (a) { }).length );
+// console.log((function (a,b) { }).length );
+// console.log((function (a,b, c=3) { }).length );
+// console.log((function (a,b,...arr) { }).length );
+// console.log((function (a,b,c,...arr) { }).length );
+
+
+  // name 属性 § ⇧
+  // 函数的name属性，返回该函数的函数名。
+
+  function foo() { }
+  console.log(foo.name);
+
+  var f = v => v;
+      console.log(f('stark'));
+
+  function f(v){
+    return v;
+  }
+
+  var stark = (name,age) => {
+    console.log(name,age);
+  }
+
+  stark('stark.wang',18);
+
+
+  const full = ({ first, last }) => first + ' ' + last;
+
+  let person = {first:'stark',last:'shudong'};
+
+  // full(person);
+  console.log(full(person));
+
+
+  // 箭头函数写法
+  [1, 2, 3].map(x => x * x);
+
+console.log([1, 2, 3].map(x => x * x)); //1 4 9
+
+
+  function foo() {
+    // setTimeout(() => {
+    //   console.log('id:', this.id);
+    // }, 100);
+    setTimeout(function() {
+      console.log('id:', this.id);
+    }, 100);
+  }
+
+  var id = 21;
+
+  foo.call({ id: 42 });
+
+
+  // function stark(){
+  //   setTimeout(() => {
+  //     console.log('id:', this.id);
+  //   }, 100);
+  // }
+
+  // var id = 10;
+  // stark.call({ id: 11 });
+
+  // id:11  
+
+  </script>
+</body>
+</html>
