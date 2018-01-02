@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let a = 1;
+    // let b = 2;
+    // let c = 3;
+    // let [a,b,c] = [1,2,3];
+  // 从数组中提取值，按照对应位置，对变量赋值。
+    // console.log(a,b,c);
+
+    // let [foo, [[bar], baz]] = [1, [[2], 3]];
+    //   foo // 1
+    //   bar // 2
+    //   baz // 3
+
+      // let [, , third] = ["foo", "bar", "baz"];
+      // console.log(third); // "baz"
+  // let [head, ...tail] = [1, 2, 3, 4];
+  // head // 1
+  // tail // [2, 3, 4]
+// console.log(tail);
+
+
+  // let [x = 1] = [null];
+
+  // console.log(x);
+
+  // let [x = 1] = [undefined];
+  // console.log(x);
+
+  let { foo, bar } = { foo: "aaa", bar: "bbb" };
+    // foo // "aaa"
+    // bar // "bbb"
+
+    // console.log(foo);
+    // console.log(bar);
+
+
+    let { foo: baz } = { foo: 'aaa', bar: 'bbb' };
+      // baz // "aaa"
+
+    // console.log(baz);
+      let obj = { first: 'hello', last: 'world' };
+      let { first: f, last: l } = obj;
+      // f // 'hello'
+      // l // 'world'
+
+    // 字符串的解构赋值
+    const [a, b, c, d, e] = 'hello';
+
+
+    // console.log(a,b,c,d,e);
+
+    [[1, 2], [3, 4]].map(([a, b]) => a + b);
+
+    let jsonData = {
+        id: 42,
+        status: "OK",
+        data: [867, 5309]
+      };
+
+      let { id, status, data: number } = jsonData;
+
+      console.log(id, status, number);
+// 42, "OK", [867, 5309]
+  </script>
+</body>
+</html>
