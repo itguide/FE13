@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let name = 'stark';
+    let people = {name};
+    // console.log(people);
+    // console.log(people.name);
+
+    function f(x, y) {
+        return { x, y };
+    }
+
+    // console.log(f(10,11)); // {x:10,y:11}
+
+
+      function peoples(name, age) {
+        return { name, age }; // 返回变量
+      }
+
+      // console.log(peoples('stark', 18));
+
+
+    // let person = {
+    //   name:'stark',
+    //   getName:function(){
+    //     return this.name;
+    //   }
+    // }
+
+    let person = {
+      name:'stark',
+      age:18,
+      getName(){
+        return this.name;
+      },
+      getAge(){
+        return this.age;
+      }
+    }
+    // console.log(person.getAge());
+
+    let propKey = 'foo';
+
+      let obj = {
+        [propKey]: true,
+        ['a' + 'bc']: 123
+      };
+
+      // console.log(obj);
+
+
+      let lastWord = 'last word';
+
+        const a = {
+          'first word': 'hello',
+          [lastWord]: 'world'
+        };
+        console.log(a['first word']);
+        console.log(a[lastWord]);
+        console.log(a['last word']);
+        // a['first word'] // "hello"
+        // a[lastWord] // "world"
+        // a['last word'] // "world"
+  </script>
+</body>
+</html>
