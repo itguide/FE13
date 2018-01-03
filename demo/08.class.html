@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function People(name,age){
+    //   this.name = name;
+    //   this.age = age;
+    // }
+
+    // var person = new People('stark',18);
+    // console.log(person.name);
+
+    class People{
+      constructor(name,age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      hello(shudong,stark){
+        return 'my name is ' + shudong + ' ' + stark;
+      }
+    }
+
+    let p  = new People('stark',18);
+    // console.log(p.age);
+    // console.log(p.name);
+    // console.log(p.hello('stark','wang'));
+
+    // es6
+    // class Point {
+    //     constructor(x, y) {
+    //       // ...
+    //     }
+
+    //     shudong() {
+    //       // ...
+    //     }
+
+    //     stark() {
+    //       // ...
+    //     }
+    //   }
+
+    var Point = function (x, y) {
+      // ...
+    };
+
+    Point.prototype.shudong = function () {
+      // ...
+    };
+
+    Point.prototype.Stark = function () {
+      // ...
+    };
+      // Object.keys(Point.prototype)
+      // console.log(Object.keys(Point.prototype));
+      // []
+      // Object.getOwnPropertyNames(Point.prototype)
+
+// 数据劫持
+      class MyClass {
+          constructor() {
+            // ...
+          }
+          get prop() {
+            return 'getter';
+          }
+          set prop(age) {
+            if(age > 18){
+              console.log('你才' + age +'岁呢!');
+            }else {
+              console.log('对，我就是' + age + '岁了！');
+            }
+          }
+        }
+
+        let inst = new MyClass();
+
+        inst.prop = 17; //此时这个行为就是设置 set 就会触发 set 方法
+        // setter: 123
+
+        // inst.prop
+// 'getter'
+
+  // Class 内部调用new.target，返回当前 Class。
+  class Rectangle {
+    constructor(length, width) {
+      console.log(new.target.name);
+      console.log(new.target === Rectangle);
+      // ...
+    }
+  }
+
+  class Square extends Rectangle {
+    constructor(length) {
+      super(length, length);
+    }
+  }
+
+  var obj = new Square(3); // 输出 false
+  </script>
+</body>
+</html>

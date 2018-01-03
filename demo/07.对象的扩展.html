@@ -8,21 +8,21 @@
 </head>
 <body>
   <script>
-    let name = 'stark';
-    let people = {name};
+    // let name = 'stark';
+    // let people = {name};
     // console.log(people);
     // console.log(people.name);
 
-    function f(x, y) {
-        return { x, y };
-    }
+    // function f(x, y) {
+    //     return { x, y };
+    // }
 
     // console.log(f(10,11)); // {x:10,y:11}
 
 
-      function peoples(name, age) {
-        return { name, age }; // 返回变量
-      }
+      // function peoples(name, age) {
+      //   return { name, age }; // 返回变量
+      // }
 
       // console.log(peoples('stark', 18));
 
@@ -34,40 +34,132 @@
     //   }
     // }
 
-    let person = {
-      name:'stark',
-      age:18,
-      getName(){
-        return this.name;
-      },
-      getAge(){
-        return this.age;
-      }
-    }
+    // let person = {
+    //   name:'stark',
+    //   age:18,
+    //   getName(){
+    //     return this.name;
+    //   },
+    //   getAge(){
+    //     return this.age;
+    //   }
+    // }
     // console.log(person.getAge());
 
-    let propKey = 'foo';
+    // let propKey = 'foo';
 
-      let obj = {
-        [propKey]: true,
-        ['a' + 'bc']: 123
-      };
+    //   let obj = {
+    //     [propKey]: true,
+    //     ['a' + 'bc']: 123
+    //   };
 
       // console.log(obj);
 
 
-      let lastWord = 'last word';
+      // let lastWord = 'last word';
 
-        const a = {
-          'first word': 'hello',
-          [lastWord]: 'world'
-        };
-        console.log(a['first word']);
-        console.log(a[lastWord]);
-        console.log(a['last word']);
+      //   const a = {
+      //     'first word': 'hello',
+      //     [lastWord]: 'world'
+      //   };
+        // console.log(a['first word']);
+        // console.log(a[lastWord]);
+        // console.log(a['last word']);
         // a['first word'] // "hello"
         // a[lastWord] // "world"
         // a['last word'] // "world"
+
+
+        // const person = {
+        //     sayName() {
+        //       console.log('hello!');
+        //     },
+        //     sayHello() {
+        //       console.log('hello!');
+        //     },
+        //   };
+
+        //   console.log(person.sayHello.name);   // "sayName"
+
+        // const obj = {
+        //     get foo() { },
+        //     set foo(x) { }
+        //   };
+
+          // obj.foo.name
+          // console.log(obj.foo.name);
+          // TypeError: Cannot read property 'name' of undefined
+
+          // const descriptor = Object.getOwnPropertyDescriptor(obj, 'foo');
+
+          // console.log(descriptor.get.name);
+          // descriptor.get.name // "get foo"
+          // descriptor.set.name // "set foo"
+
+          // const target = { a: 1 };
+
+          //   const source1 = { b: 2 };
+          //   const source2 = { c: 3 };
+
+          //   Object.assign(target, source1, source2);
+            // console.log(target); // {a:1, b:2, c:3}
+
+            // Object.assign方法的第一个参数是目标对象，后面的参数都是源对象。
+
+            // const target = { a: 1, b: 1 };
+
+            //   const source1 = { b: 2, c: 2 };
+            //   const source2 = { c: 3 };
+
+            //   Object.assign(target, source1, source2);
+              // target // {a:1, b:2, c:3}
+          // const people = {name:'stark',age:18};
+          // const people1 = {name:'shudong',age:26};
+          // const people2 = {age:28,sex:'man'};
+          // Object.assign(people,people1,people2);
+
+          // console.log(people);
+//   const obj = { a: 1 };
+//   Object.assign(obj) // true
+
+//   // console.log(obj);
+// console.log(typeof Object.assign(2) );
+
+            
+
+    // let obj = { a: 1 };
+    //   Object.assign(obj, undefined) === obj // true
+    //   Object.assign(obj, null) === obj // true
+
+    // const v1 = 'abc';
+    // const v2 = true;
+    // const v3 = 10;
+
+    // const obj = Object.assign({}, v1, v2, v3);
+    // console.log(obj); 
+
+
+    // let name = 'stark';
+    // let liming = true;
+    // let xiaohong = 99;
+
+    // let obj = Object.assign({},name,liming,xiaohong);
+    // console.log(obj);
+
+    // 浅拷贝
+    let people = {person:{name:'stark'}};
+
+    let people2 = Object.assign({},people);
+
+    // people.person.name = 'shudong';
+    // people2.person.name = 'shudongs';
+    // console.log(people2.person.name);
+    // console.log(people.person.name);
+
+    const merge = (target, ...sources) => Object.assign(target, ...sources);
+
+console.log(merge({ name: 'stark' }, { age: 18, sex: 'man' }, { height: 180 }));
+    
   </script>
 </body>
 </html>
